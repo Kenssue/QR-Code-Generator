@@ -32,7 +32,7 @@
             const course = document.forms["signupForm"]["course"].value;
             const set = document.forms["signupForm"]["set"].value;
 
-            const qrData = `${lastname}, ${firstname}, ${level}, ${section}, ${idNumber}, ${course}, ${set}`;
+            const qrData = `${lastname} ${firstname}, ${level}, ${section}, ${idNumber}, ${course}, ${set}`;
 
             const canvas = document.getElementById("qrCanvas");
             const ctx = canvas.getContext("3d");
