@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9fb; /* Soft light blue background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366; /* Deep Blue for academic vibes */
+    color: #FFD700; /* Gold text for branding */
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #FFD700; /* Gold border for emphasis */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #e0f7fa; /* Light cyan for contrast */
+}
+
+/* Containers Layout */
+.containers {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff; /* White for clarity */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 1.8em;
+    color: #003366; /* Deep blue for form header */
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #003366;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    font-size: 1em;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #FFD700; /* Gold border on focus */
+}
+
+button.submit-btn {
+    background-color: #003366; /* Deep blue */
+    color: #ffffff;
+    font-size: 1.1em;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+button.submit-btn:hover {
+    background-color: #FFD700; /* Gold on hover */
+    color: #003366;
+}
+
+/* QR Code Canvas Styling */
+#qrCanvas {
+    border-radius: 10px;
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 350px; /* Adjusted width */
+}
+
+/* Download Button Styling */
+.download-btn {
+    color: white;
+    padding: 12px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    background-color: #FF3700; /* Red button for download */
+    text-align: center;
+    margin: 20px auto;
+    max-width: 250px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ee3838;
+}
+
+.download-btn:active {
+    background-color: #003366;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: #FFD700;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Hide form container when QR code is generated */
+.form-container.qr-generated {
+    display: none;
+}
+
+/* QR Code Container */
+.qr-container {
+    display: none;
+    text-align: center;
+}
+
+.qr-container canvas {
+    margin-bottom: 20px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .download-btn {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .form-container {
+        max-width: 600px;
+    }
+
+    .download-btn {
+        max-width: 200px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .form-container {
+        max-width: 800px;
+    }
+
+    .download-btn {
+        max-width: 300px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .form-container {
+        max-width: 1000px;
+    }
+
+    .download-btn {
+        max-width: 350px;
+    }
+}

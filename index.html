@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code - ICCT Colleges</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ICCT Colleges - Student QR Code Generator</h1>
+        <p>Fill out your details to generate a personalized QR code for your student record.</p>
+    </header>
+
+    <div class="containers">
+        <div class="form-container">
+            <h2>Fill out your details</h2>
+            <form name="signupForm" class="signup-form" oninput="validateForm()" onsubmit="generateQRCode(event)">
+                <!-- Lastname -->
+                <div class="form-group">
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" id="lastname" placeholder="Ex. Bautista" name="lastname" required>
+                </div>
+
+                <!-- Firstname -->
+                <div class="form-group">
+                    <label for="firstname">Firstname:</label>
+                    <input type="text" id="firstname" placeholder="Ex. John Lloyd" name="firstname" required>
+                </div>
+
+                <!-- Year Level -->
+                <div class="form-group">
+                    <label for="level">Year Level:</label>
+                    <select name="level" id="level" required>
+                        <option value="">Select Year Level</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                    </select>
+                </div>
+
+                <!-- Section -->
+                <div class="form-group">
+                    <label for="section">Section:</label>
+                    <input type="text" id="section" placeholder="Ex. LFCA111M010" name="section" required>
+                </div>
+
+                <!-- ID Number -->
+                <div class="form-group">
+                    <label for="idNumber">ID Number:</label>
+                    <input type="text" id="idNumber" placeholder="Student ID Number" name="idNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select name="course" id="course" required>
+                        <option value="">Select Course</option>
+                        <optgroup label="Arts and Sciences">
+                            <option value="ABCom">ABCom</option>
+                            <option value="ABEng">ABEng</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="BSBA">BSBA</option>
+                            <option value="BSHRM">BSHRM</option>
+                            <option value="BSM">BSM</option>
+                            <option value="BSP">BSP</option>
+                        </optgroup>
+                        <optgroup label="Education">
+                            <option value="BSEd">BSEd</option>
+                        </optgroup>
+                        <optgroup label="Engineering">
+                            <option value="BSCE">BSCE</option>
+                            <option value="BSEE">BSEE</option>
+                            <option value="BSECE">BSECE</option>
+                            <option value="BSME">BSME</option>
+                            <option value="BSArch">BSArch</option>
+                        </optgroup>
+                        <optgroup label="Health Sciences">
+                            <option value="BSN">BSN</option>
+                        </optgroup>
+                        <optgroup label="Information Technology">
+                            <option value="BSIT">BSIT</option>
+                            <option value="BSCS">BSCS</option>
+                        </optgroup>
+                        <optgroup label="Accountancy">
+                            <option value="BSAcc">BSAcc</option>
+                            <option value="BSA">BSA</option>
+                        </optgroup>
+                        <optgroup label="Hospitality Management">
+                            <option value="BSHM">BSHM</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- Set -->
+                <div class="form-group">
+                    <label for="set">Set:</label>
+                    <select name="set" id="set" required>
+                        <option value="">Select Set</option>
+                        <option value="Set A">Set A</option>
+                        <option value="Set B">Set B</option>
+                    </select>
+                </div>
+                
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" disabled>Generate QR Code</button>
+            </form> 
+        </div>
+
+        <!-- QR Code Display -->
+        <div class="qr-container">
+            <canvas id="qrCanvas"></canvas>
+            <a id="downloadBtn" class="download-btn">Download QR Code</a>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 ICCT Colleges | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
