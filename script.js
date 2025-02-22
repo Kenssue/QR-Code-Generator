@@ -40,7 +40,7 @@
             canvas.width = qrSize;
             canvas.height = qrSize;
 
-            QRCode.toCanvas(canvas, qrData, { width: qrSize, margin: 1 }, function (error) {
+            QRCode.toCanvas(canvas, qrData, { width: qrSize, scale: 50, margin: 1 }, function (error) {
                 if (error) {
                     console.error(error);
                     alert("Error generating QR code!");
